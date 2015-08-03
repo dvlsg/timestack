@@ -7,10 +7,10 @@
     "test": "gulp test"
   },
   "keywords": [
-    "timing",
-    "stopwatch",
+    "performance",
     "profiling",
-    "performance"
+    "stopwatch",
+    "timing"
   ],
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "gulp-eslint": "^0.14.0",
     "gulp-mocha": "^2.1.1",
     "gulp-plumber": "^1.0.1",
+    "run-sequence": "^1.1.2",
     "zana-assert": "^0.1.4"
   },
   "dependencies": {
