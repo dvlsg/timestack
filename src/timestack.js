@@ -3,11 +3,13 @@
 import StopwatchWrapper from './stopwatch-wrapper.js';
 
 let STACK = Symbol('stack');
+let CALLBACK = Symbol('callback');
 
 export default class Timestack {
 
-    constructor() {
+    constructor(callback: Function = x => x) {
         this[STACK] = [];
+        this[CALLBACK] = callback;
     }
 
     get length() {
@@ -20,6 +22,6 @@ export default class Timestack {
 
     pop() {
         if (this[STACK].length > 0)
-            return this[STACK].pop().stop();
+            return this[CALLBACK](this[STACK].pop().stop());
     }
 }

@@ -29,7 +29,7 @@ var TimeResponse = (function () {
     }, {
         key: _Symbol$toStringTag,
         get: function get() {
-            return "TimeResponse";
+            return 'TimeResponse';
         }
     }]);
 

@@ -55,7 +55,7 @@ var Stopwatch = (function () {
     }, {
         key: _Symbol$toStringTag,
         get: function get() {
-            return "Stopwatch";
+            return 'Stopwatch';
         }
     }, {
         key: "duration",

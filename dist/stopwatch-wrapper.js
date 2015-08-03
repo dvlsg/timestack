@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var _createClass = require('babel-runtime/helpers/create-class')['default'];
 
@@ -22,7 +22,7 @@ var _timeResponseJs2 = _interopRequireDefault(_timeResponseJs);
 
 var StopwatchWrapper = (function () {
     function StopwatchWrapper() {
-        var description = arguments[0] === undefined ? '(UNKNOWN)' : arguments[0];
+        var description = arguments.length <= 0 || arguments[0] === undefined ? "(UNKNOWN)" : arguments[0];
 
         _classCallCheck(this, StopwatchWrapper);
 

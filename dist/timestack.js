@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var _createClass = require('babel-runtime/helpers/create-class')['default'];
 
@@ -17,12 +17,18 @@ var _stopwatchWrapperJs = require('./stopwatch-wrapper.js');
 var _stopwatchWrapperJs2 = _interopRequireDefault(_stopwatchWrapperJs);
 
 var STACK = _Symbol('stack');
+var CALLBACK = _Symbol('callback');
 
 var Timestack = (function () {
     function Timestack() {
+        var callback = arguments.length <= 0 || arguments[0] === undefined ? function (x) {
+            return x;
+        } : arguments[0];
+
         _classCallCheck(this, Timestack);
 
         this[STACK] = [];
+        this[CALLBACK] = callback;
     }
 
     _createClass(Timestack, [{
@@ -33,7 +39,7 @@ var Timestack = (function () {
     }, {
         key: 'pop',
         value: function pop() {
-            if (this[STACK].length > 0) return this[STACK].pop().stop();
+            if (this[STACK].length > 0) return this[CALLBACK](this[STACK].pop().stop());
         }
     }, {
         key: 'length',
